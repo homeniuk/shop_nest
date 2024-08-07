@@ -14,11 +14,6 @@ export class AppController {
     return res.status(200).send(req.query);
   }
 
-  @Get('users')
-  getUsers(){
-    return this.appService.getUsers();
-  }
-
   @Post('/')
   postHello(
     @Req() req: Request,
