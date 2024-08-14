@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { PrismaService } from 'src/prisma.service';
+import { PrismaService } from 'prisma/prisma.service';
 
 @Injectable()
 export class UserService {
@@ -19,6 +19,9 @@ export class UserService {
 
   async findOne(id: number) {
     return this.prisma.user.findUnique({where: { id }});
+  }
+  async findOneByEmail(email: string) {
+    return this.prisma.user.findUnique({where: { email }});
   }
 
   async update(id: number, updateUserDto: UpdateUserDto) {
