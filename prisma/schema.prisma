@@ -13,3 +13,13 @@ model User {
   login     String
   password  String
 }
+
+model Product {
+  id            Int     @default(autoincrement()) @id
+  name          String  @unique
+  description   String
+  image         String
+  imageSmall    String
+  catalog       String
+  price         Float
+}
