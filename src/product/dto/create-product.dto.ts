@@ -18,4 +18,7 @@ export class CreateProductDto {
 
     @IsNumber()
     price:       number;
+
+    @IsNumber()
+    rating:       number;
 }

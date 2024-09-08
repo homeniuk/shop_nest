@@ -14,7 +14,8 @@ export class ProductService {
     return this.prisma.product.findUnique({where: { id }});
   }
   async findByCatalog(catalog: string) {
-    return this.prisma.product.findMany({where: { catalog }});
+    const goodsList = await this.prisma.product.findMany({where: { catalog }});
+    return {goodsList};
   }
 
   async create(createProductDto: CreateProductDto) {
