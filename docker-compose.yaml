@@ -2,6 +2,7 @@ version: '3.8'
 services:
   db:
     image: postgres
+    restart: always
     volumes:
       - ./data/db:/var/lib/postgresql/data
     ports:
@@ -27,3 +28,4 @@ services:
       - db
     depends_on:
       - db
+    restart: always
