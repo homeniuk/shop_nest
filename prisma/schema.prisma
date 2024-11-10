@@ -23,7 +23,7 @@ model Product {
   imageSmall    String
   catalog       String
   price         Float
-  rating        Float?
+  rating        Float
   basket        Basket[]
 }
 

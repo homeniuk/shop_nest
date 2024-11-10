@@ -9,7 +9,7 @@ export class AppController {
     @Req() req: Request,
     @Res() res: Response
   ) {
-    return res.status(200).send(req.query);
+    return res.status(200).send('It is back for shop');
   }
 
   @Post('/')
@@ -17,7 +17,7 @@ export class AppController {
     @Req() req: Request,
     @Res() res: Response
   ) {
-    return res.status(200).send(req.query);
+    return res.status(200).send('It is back for shop');
   }
 
 }
